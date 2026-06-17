@@ -1,0 +1,132 @@
+body {
+    background-color: #1a1a2e;
+    color: #e6f7ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+h1, h2 {
+    color: #8be9fd;
+    text-align: center;
+}
+
+.panel {
+    background-color: #272744;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #aaffb3;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #4f4f7a;
+    border-radius: 4px;
+    background-color: #383861;
+    color: #e6f7ff;
+}
+
+input[type="file"] {
+    padding: 8px 0;
+}
+
+button {
+    background-color: #55c1ff;
+    color: #1a1a2e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #8be9fd;
+}
+
+/* Table Styling */
+#clientDetailsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#clientDetailsTable th, #clientDetailsTable td {
+    border: 1px solid #4f4f7a;
+    padding: 10px;
+    text-align: left;
+}
+
+#clientDetailsTable th {
+    background-color: #383861;
+    color: #8be9fd;
+}
+
+/* Status Styling */
+.status {
+    padding: 15px;
+    border: 2px solid;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.malicious-status {
+    color: #ff5a5a !important;
+    font-weight: bold;
+}
+
+.trustworthy-status {
+    color: #aaffb3 !important;
+    font-weight: bold;
+}
+
+.alert {
+    padding: 10px;
+    background-color: #ff4d4d;
+    color: #1a1a2e;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#trustList {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1e1e35;
+    border-radius: 6px;
+    word-break: break-all;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}

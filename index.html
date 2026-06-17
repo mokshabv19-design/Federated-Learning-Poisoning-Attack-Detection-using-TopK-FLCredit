@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>TOPK-FLcredit Simulator - Input</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <div class="container">
+    <h1>TOPK-FLCREDIT SIMULATOR</h1>
+    <h2 style="text-align:center; color:#aaffb3; font-size:24px; margin-bottom: 25px;">FEDERATED LEARNING PROTOCOL ANALYSIS</h2>
+
+    <section class="panel">
+      <h2>01. DATASET INPUT (Upload Gradient Data - CSV)</h2>
+      
+      <p style="font-size: 14px; margin-bottom: 12px; color: #aaa;">CSV format: client_id, g0, g1, g2, ... (each row per client)</p>
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <input type="hidden" id="n_clients" value="12">
+        <input type="hidden" id="poison_rate" value="0.25">
+        <input type="hidden" id="rounds" value="15">
+        <input type="hidden" id="topk" value="4">
+        <input type="hidden" id="seed" value="42">
+        <input type="hidden" id="kw" value="1">
+        <input type="hidden" id="threshold" value="90">
+        <select id="poison_type" style="display:none;">
+              <option value="scale">Scale Attack</option>
+              <option value="flip">Flip Attack</option>
+              <option value="random">Random Noise</option>
+        </select>
+        
+        <input type="file" id="csvFile" accept=".csv" multiple style="width: 250px;">
+        <button id="runCsvBtn">Upload CSV & Run Simulation</button>
+      </div>
+      <p id="statusMessage" style="margin-top: 15px; color: yellow;"></p>
+    </section>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

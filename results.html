@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>TOPK-FLcredit Simulator - Results</title>
+  <link rel="stylesheet" href="style.css"> 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>TOPK-FLCREDIT SIMULATOR</h1>
+    <h2 style="text-align:center; color:#aaffb3; font-size:24px; margin-bottom: 25px;">SIMULATION RESULTS</h2>
+    
+    <div id="loadingMessage" style="text-align: center; font-size: 18px; color: #8be9fd;">Loading simulation results...</div>
+
+    <section class="panel hidden" id="parameterSection">
+        <h2>02. PROTOCOL PARAMETERS USED</h2>
+        <div id="parameterDisplay" class="grid-display">
+            </div>
+    </section>
+
+    <section class="panel hidden" id="clientAnalysisSection">
+        <h2>03. CLIENT DATA ANALYSIS (Initial Scores)</h2>
+        <div id="clientTableContainer">
+            <table id="clientDetailsTable"></table>
+        </div>
+    </section>
+
+    <section class="panel hidden" id="protocolAnalysisSection" style="position: relative;">
+      <h2>04. PROTOCOL ANALYSIS: TOP-K SELECTION</h2>
+      
+      <div id="alert" class="alert hidden"></div>
+      
+      <h3 style="text-align:center; color:#55c1ff; margin-top:10px;">TOP-K CLIENTS LOSS DISTRIBUTION</h3>
+      <p style="text-align:center; font-size:12px; color:#aaa;">(Red = Malicious, Green = Trustworthy & Selected in Top-K, Purple/Violet = Trustworthy & NOT Selected)</p>
+      
+      <canvas id="barChart" width="900" height="250" style="background: rgba(0,0,0,0.2); border-radius: 6px;"></canvas> 
+    </section>
+
+    <section class="panel hidden" id="finalStatusSection">
+      <h2>05. FINAL SECURITY STATUS</h2>
+      <div id="finalStatus" class="status"></div>
+      <div id="trustList"></div>
+    </section>
+
+    <p style="text-align:center; margin-top: 20px;">
+        <a href="/" style="color: #55c1ff; text-decoration: none; font-weight: bold;">← Run a New Simulation</a>
+    </p>
+
+  </div>
+
+  <script src="results-script.js"></script>
+</body>
+</html>
